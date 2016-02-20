@@ -9,7 +9,8 @@ int *build_array( int length );
 int *build_array( int length )
 {
 	int *array = malloc( length + 1 );
-	for( int i = 0; i < length; i++)
+	int i;
+	for( i = 0; i < length; i++)
 	{
 		array[i] = rand() % TOTAL_DE_CORES;
 	}
@@ -34,8 +35,8 @@ void get_rodada( int *piscadas, int rodada, int *rodadas )
 		rodadas[0] = -1;
 		return;
 	}
-
-	for( int i = 0; i < rodada; i++ )
+	int i;
+	for( i = 0; i < rodada; i++ )
 	{
 		rodadas[i] = piscadas[i];
 	}

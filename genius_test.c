@@ -17,7 +17,8 @@ void test_should_create_initial_array()
 	assert( actual != NULL );
 
 	// garante que o comprimento do array está preenchido com 'a'
-	for( int i = 0; i < length; i++ )
+	int i;
+	for( i = 0; i < length; i++ )
 	{
 		assert( actual[i] == AMARELO || 
 			actual[i] == VERMELHO || 
@@ -83,7 +84,8 @@ void test_should_win_genius_round()
 	get_rodada( piscadas, 3, rodada );
 
 	// jogar
-	for(int i = 0; i < 3; i++)
+	int i;
+	for( i = 0; i < 3; i++ )
 	{
 		assert(validate_answer( rodada, i, respostas[i] ) == RESPOSTA_CERTA );
 	}
