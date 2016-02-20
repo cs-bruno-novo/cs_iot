@@ -11,4 +11,4 @@
 
 int *build_array( int length );
 int validate_answer( int *, int, int );
-int *get_rodada( int *, int );
+void get_rodada( int *, int, int * );

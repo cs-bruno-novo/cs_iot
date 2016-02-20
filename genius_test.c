@@ -46,25 +46,28 @@ void test_should_retorna_rodada()
 	int piscadas[4] = { AMARELO, VERDE, AMARELO, -1 };
 
 	// simula retorna as piscadas da rodada zero
-	int *rodada = get_rodada( piscadas, 0 );
-	assert( rodada == NULL );
+	int rodada[1];
+	get_rodada( piscadas, 0, rodada);
+	assert( rodada[0] == -1 );
 
 	// simula retorna as piscadas da primeira rodada
-	int *rodada1 = get_rodada( piscadas, 1 );
-	assert( rodada1 != NULL );
+	int rodada1[2];
+	get_rodada( piscadas, 1, rodada1);
 	assert( rodada1[0] == AMARELO );
+	assert( rodada1[1] == -1 );
 
 	// // simula retorna as piscadas da primeira rodada
-	// int *rodada2 = get_rodada( piscadas, 2 );
-	// assert( rodada2 != NULL );
-	// assert( rodada2[0] == AMARELO );
-	// assert( rodada2[1] == VERDE );
+	int rodada2[3];
+	get_rodada( piscadas, 2, rodada2);
+	assert( rodada2[0] == AMARELO );
+	assert( rodada2[1] == VERDE );
+	assert( rodada2[2] == -1 );
 
 	// // simula retorna as piscadas da terceira rodada
-	// int *rodada3 = get_rodada( piscadas, 2 );
-	// assert( rodada3 != NULL );
-	// assert( rodada3[0] == AMARELO );
-	// assert( rodada3[1] == VERDE );
-	// assert( rodada3[2] == AMARELO );
-
+	int rodada3[4];
+	get_rodada( piscadas, 3, rodada3);
+	assert( rodada3[0] == AMARELO );
+	assert( rodada3[1] == VERDE );
+	assert( rodada3[2] == AMARELO );
+	assert( rodada3[3] == -1 );
 }

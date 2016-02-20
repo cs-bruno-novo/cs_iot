@@ -27,17 +27,17 @@ int validate_answer( int *piscadas, int position, int cor )
 	return RESPOSTA_ERRADA;
 }
 
-int *get_rodada( int *piscadas, int rodada )
+void get_rodada( int *piscadas, int rodada, int *rodadas )
 {
 	if( rodada == 0 )
-		return NULL;
+	{
+		rodadas[0] = -1;
+		return;
+	}
 
-	int *rodadas = (int*)malloc( (rodada + 1) * sizeof(int) );
 	for( int i = 0; i < rodada; i++ )
 	{
 		rodadas[i] = piscadas[i];
 	}
 	rodadas[rodada] = -1;
-
-	return rodadas;
 }
