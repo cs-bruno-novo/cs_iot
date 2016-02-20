@@ -71,3 +71,20 @@ void test_should_retorna_rodada()
 	assert( rodada3[2] == AMARELO );
 	assert( rodada3[3] == -1 );
 }
+
+void test_should_win_genius_round() 
+{
+	// contruir array com 4 jogadas
+	int piscadas[5] = { AMARELO, VERDE, BRANCO, VERMELHO, -1 };
+	int respostas[4] = { AMARELO, VERDE, BRANCO, -1 };
+
+	// jogar a terceira rodada e verificar resposta correta
+	int rodada[4];
+	get_rodada( piscadas, 3, rodada );
+
+	// jogar
+	for(int i = 0; i < 3; i++)
+	{
+		assert(validate_answer( rodada, i, respostas[i] ) == RESPOSTA_CERTA );
+	}
+}
