@@ -21,5 +21,4 @@ EOF
 )
 
 ## Submit the JSON to the Slack URL
-curl -X POST -H 'Content-type: application/json' \
---data "$JSON" "$SLACK_URL"
+curl -X POST -H 'Content-type: application/json' --data "$JSON" "$SLACK_URL"
