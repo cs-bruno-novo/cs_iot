@@ -14,8 +14,7 @@ void test_should_create_initial_array()
 	actual = build_array( length );
 
 	// garante que o array não é nulo
-	//assert( actual != NULL );
-	assert( actual == NULL );
+	assert( actual != NULL );
 
 	// garante que o comprimento do array está preenchido com 'a'
 	int i;
