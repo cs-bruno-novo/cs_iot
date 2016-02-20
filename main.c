@@ -12,4 +12,5 @@ int main( int argc, char *argv[] )
 void call_tests()
 {
 	test_should_create_initial_array();
+	test_should_validate_answer();
 }
