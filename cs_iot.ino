@@ -1,6 +1,7 @@
-void setup() {
-  // put your setup code here, to run once:
+#include "genius.h"
 
+void setup() {
+	int * array = build_array(5);
 }
 
 void loop() {
